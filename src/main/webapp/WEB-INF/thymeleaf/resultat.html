@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head th:include="templates/head :: header"></head>
+	<body>
+		<div class="page-header text-center">
+			<h1>RESULTADO FORMULARIO <small>enviado</small></h1>
+		</div>
+		<div class="container-fluid">
+			<div class="table-responsive">
+				<table class="table table-condensed">
+					<thead>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Edad</th>
+						<th>Genero</th>
+						<th>Conductor</th>
+						<th>Idiomas</th>
+					</thead>
+					<tbody  class="active">
+						<tr>
+							<td th:text="${beanPersona.nombre}"></td>
+							<td th:text="${beanPersona.apellidos}"></td>
+							<td th:text="${beanPersona.edad}"></td>
+							<td th:text="${beanPersona.genero}"></td>
+							<td th:text="${beanPersona.carnetDeConducir} ? 'Si' : 'No' "></td>
+							<td th:each="idioma : ${beanPersona.idiomas}">
+								<span th:text="${idioma}"></span>
+							</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+			<a href="./" class="btn btn-info">Volver</a>
+		</div>
+		<div class="text-center nav navbar-fixed-bottom" th:include="templates/footer :: peu"></div>
+	</body>
+</html>
