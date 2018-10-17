@@ -173,6 +173,11 @@
 
 		<!-- Spring security -->
 		<dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-core</artifactId>
+		  <version>[4.1.1,)</version>
+		</dependency>
+		<!--<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
 			<version>${spring-framework-security.version}</version>
@@ -201,7 +206,7 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-aspects</artifactId>
 			<version>${spring-framework-security.version}</version>
-		</dependency>
+		</dependency>-->
 
 		<!-- Hibernate -->
 		<dependency>
